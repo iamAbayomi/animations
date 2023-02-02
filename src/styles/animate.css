@@ -1,0 +1,65 @@
+body{
+  padding: 50px;
+}
+
+#container{
+  padding: 20px;
+  width: 100%;
+  height: 250px;
+  background-color: #EEE;
+  text-align: center;
+}
+
+/* @keyframes bobble {
+  0%{
+    transform: translateY(10px);
+    transform: translateX(-300px); 
+  }
+
+  50%{
+    transform: translateY(40px);
+    transform: translateX(300px); 
+  }
+
+  100%{
+    transform: translateY(10px);
+    transform: translateX(-300px); 
+  }
+} */
+
+
+
+@keyframes bobble {
+  0%{
+    transform: translateX(-300px); 
+    animation-timing-function: ease-in;
+  }
+
+  25%{
+    transform: translateY(-300px);
+    animation-timing-function: ease-out;
+  }
+
+  50%{
+    transform: translateX(300px); 
+  }
+
+  75%{
+    transform: translateY(300px); 
+  }
+
+  100%{
+    transform: translateX(-300px); 
+  }
+}
+
+
+#hexagon{
+  animation: bobble 5s infinite;
+  transition: transform .2s;
+}
+
+
+#hexagon:hover{
+  transform: scale3d(1.2, 1.2, 1) rotate(45deg);
+}
